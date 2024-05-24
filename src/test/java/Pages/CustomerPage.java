@@ -3,17 +3,17 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class CustomerPage {
-    public WebDriver driver;
-    WebElement yourNameText;
-    WebElement customerDropDown;
+    WebDriver driver;
 
-//    WebElement yourName_xpath;
-//
-//    @FindBy(xpath = "//select[contains(@name,'userSelect')]")
-//    WebElement customerDropDown_xpath;
+    @FindBy(xpath = "//label[contains(.,'Your Name :')]")
+    WebElement yourNameText;
+
+    @FindBy(xpath = "//select[@name='userSelect']")
+    WebElement customerDropDown;
 
     public CustomerPage(WebDriver driver) {
         this.driver = driver;
