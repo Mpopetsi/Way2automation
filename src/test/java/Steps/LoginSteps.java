@@ -13,14 +13,14 @@ public class LoginSteps extends Base {
 
     @When("the User Clicks the Customer Login Button")
     public void the_user_clicks_the_customer_login_button() {
-        customerPage.initialize();
-        customerPage.verifyYourNameText();
-        customerPage.clickCustomerDropDown();
+        login.clickCustomerLoginButton();
     }
 
     @When("the User Clicks Dropdown List")
     public void the_user_clicks_dropdown_list() {
-
+        customerPage.initialize();
+        customerPage.verifyYourNameText();
+        customerPage.clickCustomerDropDown();
     }
 
     @Then("the User Selects <yourName>")
